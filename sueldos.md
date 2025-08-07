@@ -37,7 +37,7 @@ Fin
 ```
 
 ## Diagrama de flujo
-
+![Lapices](Diagra_lapiz.png)
 
 ## Ejercicio 4
 
@@ -101,8 +101,7 @@ Fin Si
 ``` 
 
 ## Diagrama de flujo
-
-
+![Alumnos](Diagra_alumnos.png)
 
 ## Ejercicio 6
 
