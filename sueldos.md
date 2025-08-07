@@ -43,7 +43,7 @@ Fin
 
 Un almacén de ropa tiene una promoción: por compras superiores a $250000 se les aplicará un descuento de 15%, de caso contrario, solo se aplicará un 8% de descuento. Realice un algorítmo para determinar el precio final que debe pagar una persona por comprar en dicho almacén y de cuánto es el descuento que obtendrá. Represéntelo mediante el pseudocódigo y el diagrama de flujo.
 
-## Análisis
+### Análisis
 
 | Variable de entrada | Descripción |
 |---------------------|-------------|
@@ -75,16 +75,30 @@ Fin
 ```
 
 ## Diagráma de flujo
-
-
+![Shop](Shop.png)
 
 ## Ejercicio 5
 
 El director de una escuela está organizando un viaje de estudios, y requiere determinar cuánto debe cobrar a cada alumno y cuánto debe pagar a la compañía de viajes por el servicio. La forma de cobrar es la siguiente: si son 100 alumnos o más, el costo por cada alumno es de $65.00; de 50 a 99 alumnos, el costo es de $70.00, de 30 a 49, de $95.00, y si son menos de 30, el costo de la renta del autobús es de $4000.00, sin importar el número de alumnos.
 
-## Análisis falta completar
+### Análisis
 
-### Pseudocódigo falta completar
+| Variable de entrada | Descripción |
+|---------------------|-------------|
+| costo_alumno | Costo por cada alumno|
+
+| Variables de salida | Descripción |
+|---------------------|-------------|
+| costo_total | Costo total de cantidad de alumnos que irán |
+
+| Constantes | Descripción |
+|------------|-------------|
+| $4000.00 | Costo autobús sin importar el número de alumnos |
+| $65.00 | Costo por cada alumno si van 100 alumnos o más |
+| $70.00 | Costo por cada alumno si van 30 a 49 alumnos |
+| $95.00 | Costo por cada alumno si van menos de 30 alumnos | |
+
+### Pseudocódigo
 
 ```
 Inicio
@@ -92,16 +106,19 @@ Leer alumnos
 Si alumnos >= 100
    costo_alumno = 65
 Si no
-   Si alumnos >=50
+   Si alumnos >= 50
       costo_alumno = 70
-   Si no
+Si no
+   Si alumnos >= 30
       costo_alumno = 95
-   Fin Si
 Fin Si
+costo_total = alumnos * costo_alumno
+Mostrar "valor a pagar: $", costo_total, costo_alumno
+Fin
 ``` 
 
 ## Diagrama de flujo
-![Alumnos](Diagra_alumnos.png)
+![Alumnos](Diagra_alumn.png)
 
 ## Ejercicio 6
 
