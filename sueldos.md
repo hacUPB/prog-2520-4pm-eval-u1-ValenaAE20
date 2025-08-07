@@ -133,21 +133,60 @@ Calcular cuál fue el descuento aplicado y cuánto tiene que pagar la persona.
 | precio_prenda_2 | Costo de cada prenda |
 | precio_prenda_3 | Costo de cada prenda |
 
+| Variables intermedias | Descripción |
+|-----------------------|------------|
+| valor_descuento | Precio de la prenda por el descuento
+| valor_prenda_descuento | Precio de la prenda aplicado el descuento
+
 | Variables de salida | Descripción |
 |---------------------|-------------|
 | precio_final | Valor que hay que pagar |
-|descuento     | Valor del descuento |
+| valor_descuento     | Valor del descuento |
 
 | Constantes | Descripción |
 |------------|-------------|
 | 3 | valor a partir del cual se da el descuento |
 | 70% | descuentos |
 
-## Pseudocódigo
+### Pseudocódigo
 
 ```
 Inicio
 Leer precio_prenda_1
      precio_prenda_2
      precio_prenda_3
-Si precio_prenda_1 < precio_prenda_2 y 
+Si precio_prenda_1 < precio_prenda_2 y precio_prenda_1 < precio_prenda_3
+   valor_descuento = precio_prenda_1 * 0.70
+   valor_prenda_descuento = precio_prenda_1 - valor_descuento
+   precio_final = valor_prenda_descuento + precio_prenda_2 + precio_prenda_3
+Si no
+   Si precio_prenda_2 < precio_prenda_3 y precio_prenda_2 < precio_prenda_1
+     valor_descuento = precio_prenda_2 * 0.70
+     valor_prenda_descuento = precio_prenda_2 - valor_descuento
+     precio_final = valor_prenda_descuento + precio_prenda_1 + precio_prenda_3
+Si no
+   Si precio_prenda_3 < precio_prenda_1 y precio_prenda_3 < precio_prenda_2
+     valor_descuento = precio_prenda_3 * 0.70
+   valor_prenda_descuento = precio_prenda_3 - valor_descuento
+   precio_final = valor_prenda_descuento + precio_prenda_1 + precio_prenda_2
+Fin si
+Mostrar "valor a pagar: $", costo_total
+Fin
+```
+
+## Diagrama de flujo
+![Prendas](Prendas.png)
+
+## Homework
+A cada persona se le tomarán los datos en que nacieron: día, mes y año. Con el día-actual, mes-actual y año actual, hallar cuántos años tienen.
+
+## Análisis
+
+
+
+### Pseudocódigo
+
+
+## Diagrama de flujo
+
+
