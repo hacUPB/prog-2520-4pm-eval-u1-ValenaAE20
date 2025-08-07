@@ -169,7 +169,7 @@ Si no
      valor_descuento = precio_prenda_3 * 0.70
    valor_prenda_descuento = precio_prenda_3 - valor_descuento
    precio_final = valor_prenda_descuento + precio_prenda_1 + precio_prenda_2
-Fin si
+Fin Si
 Mostrar "valor a pagar: $", costo_total
 Fin
 ```
@@ -182,12 +182,44 @@ A cada persona se le tomarán los datos en que nacieron: día, mes y año. Con e
 
 ## Análisis
 
+| Variable de entrada | Descripción |
+|---------------------|-------------|
+| día_nacimiento | Día de nacimiento del usuario |
+| mes_nacimiento | Mes de nacimiento del usuario |
+| año_nacimiento | Año de nacimiento del usuario |
+| día_actual | Día de hoy
+| mes_actual | Mes actual
+| año_actual | Año actual
 
+| Variable intermedia | Descripción |
+|---------------------|-------------|
+| años_cumplidos | Si el usuario ya cumplió años |
+| no_cumplidos | Si el usuario aún no ha cumplido años |
+
+| Variables de salida | Descripción |
+|---------------------|-------------|
+| Edad_actual | Edad actual del usuario |
 
 ### Pseudocódigo
 
+```
+Inicio
+Leer dia_nacimiento
+     mes_nacimiento
+     año_nacimiento
+     dia_actual
+     mes_actual
+     año_actual
+Si
+  dia_actual > dia_nacimiento y mes_actual > mes_nacimiento 
+    años_cumplidos = año actual - año nacimiento
+Si no
+   dia_actual < dia_nacimiento y mes_actual < mes_nacimiento
+     no_cumplidos = año actual - año nacimiento - 1
+Fin Si
+Mostrar edad_actual
+Fin
+```
 
 ## Diagrama de flujo
-
-
-
+![Edades](Edades.png)
