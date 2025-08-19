@@ -57,10 +57,28 @@ Se requiere un algoritmo para determinar, de N cantidades, cuántas son cero, cu
 ```
 Inicio
 
+leer N
 
+ceros <= 0
+menores <= 0
+mayores <= 0
+
+i < 1 hasta N hacer
+  leer numero
+Si numero = 0 entonces ceros < ceros + 1
+
+Sino
+  Si numero < 0 entonces menores = menores + 1
+Sino 
+  mayores = mayores + 1
+
+Fin mientras
+Mostrar ceros, menores, mayores
+Fin
 ```
 
 ## Diagráma de flujo
 
+![bucle](Bucle2.png)
 
 
